@@ -1,0 +1,78 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-webapi-deployment
+  namespace: default
+spec:
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  selector:
+    matchLabels:
+      app: sample-app
+  template:
+    metadata:
+      labels:
+        app: sample-app
+    spec:
+      hostAliases:
+        - ip: 127.0.0.1
+          hostnames:
+            - sample-dev-kafka
+      containers:
+        - name: sample-webapi-container
+          image: sample-webapi:dev-v1
+          resources:
+            requests:
+              memory: "500Mi"
+              cpu: "300m"
+            limits:
+              memory: "700Mi"
+              cpu: "400m"
+          env:
+            - name: BUILD_NUMBER
+              value: "101"
+            - name: TZ
+              value: "Europe/Istanbul"
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Development"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+          startupProbe:
+            httpGet:
+              path: /StartCheck
+              port: 80
+            initialDelaySeconds: 5
+            failureThreshold: 15
+            periodSeconds: 5
+          livenessProbe:
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            failureThreshold: 3
+            successThreshold: 1
+            timeoutSeconds: 2
+            exec:
+              command:
+                - "curl"
+                - "--fail"
+                - "-o"
+                - "/dev/null"
+                - "http://localhost/HealthCheck"
+          readinessProbe:
+            initialDelaySeconds: 15
+            periodSeconds: 10
+            failureThreshold: 3
+            successThreshold: 1
+            timeoutSeconds: 2
+            exec:
+              command:
+                - "curl"
+                - "--fail"
+                - "-o"
+                - "/dev/null"
+                - "http://localhost/ReadyCheck"
+      imagePullSecrets:
+        - name: sample-app-secret
