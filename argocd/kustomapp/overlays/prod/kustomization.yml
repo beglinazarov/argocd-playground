@@ -1,0 +1,16 @@
+bases:
+- ../../base
+
+namespace: prod
+
+patches:
+- ./patches/replicas.yml
+- ./patches/rolloutStrategy.yml
+- ./patches/imageRef.yml
+#- ./patches/probes.yml
+- ./patches/resourceLimit.yml
+#- ./patches/hostAliases.yml
+
+configMapGenerator:
+- name: mykustom-map-prod
+  env: config.properties

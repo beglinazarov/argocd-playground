@@ -1,0 +1,15 @@
+resources:
+- deployment.yml
+- service.yml
+
+commonLabels:
+  app: sample-webapi-app
+
+commonAnnotations:
+  app: mykustom-annotations
+
+namePrefix:
+  kustom-
+
+nameSuffix:
+  -v1

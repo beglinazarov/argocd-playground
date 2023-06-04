@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-webapi-deployment
+spec:
+  template:
+    spec:
+      containers:
+        - name: sample-webapi-container
+          resources:
+            requests:
+              memory: "500Mi"
+              cpu: "300m"
+            limits:
+              memory: "700Mi"
+              cpu: "400m"

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-webapi-deployment
+spec:
+  replicas: 1
+  strategy:
+    rollingUpdate:
+  template:
+    spec:
+      containers:
+        - name: sample-webapi-container
+          image: 
+          resources:
+            requests:
+              memory: "500Mi"
+              cpu: "300m"
+            limits:
+              memory: "700Mi"
+              cpu: "400m"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80

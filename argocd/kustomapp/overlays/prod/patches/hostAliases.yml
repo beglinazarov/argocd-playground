@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-webapi-deployment
+spec:
+  template:
+    spec:
+      hostAliases:
+        - ip: 172.16.70.21
+          hostnames:
+            - rota-staging-kafka2
+        - ip: 172.16.70.22
+          hostnames:
+            - rota-staging-kafka3
+        - ip: 172.16.70.20
+          hostnames:
+            - rota-staging-kafka1
