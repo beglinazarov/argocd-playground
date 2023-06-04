@@ -18,6 +18,6 @@ patches:
 #- ./patches/resourceLimit.yml
 #- ./patches/hostAliases.yml
 
-configMapGenerator:
-- name: mykustom-map-dev
-  env: config.properties
+# configMapGenerator:
+# - name: mykustom-map-dev
+#   env: config.properties
