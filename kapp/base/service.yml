@@ -7,4 +7,4 @@ spec:
   - name: http
     port: 8000
   selector:
-  app: frontend-deployment
+    app: frontend-deployment
