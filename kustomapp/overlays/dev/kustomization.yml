@@ -1,7 +1,9 @@
-bases:
-- ../../base
+apiVersion: kustomize.config.k8s.io/v1beta1
+  kind: Kustomization
+  bases:  
+  - ../../base
 
-namespace: dev
+  namespace: dev
 
 # resources:
 # - deployment.yml
@@ -10,10 +12,10 @@ namespace: dev
 # namePrefix: kustomapp-
 # nameSuffix: -dev-v1
 
-patches:
+  patches:
 #- ./patches/replicas.yml
 #- ./patches/rolloutStrategy.yml
-- ./patches/imageRef.yml
+  - ./patches/imageRef.yml
 #- ./patches/probes.yml
 #- ./patches/resourceLimit.yml
 #- ./patches/hostAliases.yml

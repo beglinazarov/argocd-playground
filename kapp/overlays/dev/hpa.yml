@@ -1,0 +1,16 @@
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: frontend-deployment
+spec:
+  minReplicas: 1
+  maxReplicas: 2
+  metrics:
+  - type: Resource
+  resource:
+    requests:
+      memory: "500Mi"
+      cpu: "300m"
+    limits:
+      memory: "700Mi"
+      cpu: "400m"
