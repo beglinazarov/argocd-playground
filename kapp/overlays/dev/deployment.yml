@@ -41,38 +41,38 @@ spec:
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
-          startupProbe:
-            httpGet:
-              path: /StartCheck
-              port: 80
-            initialDelaySeconds: 5
-            failureThreshold: 15
-            periodSeconds: 5
-          livenessProbe:
-            initialDelaySeconds: 10
-            periodSeconds: 10
-            failureThreshold: 3
-            successThreshold: 1
-            timeoutSeconds: 2
-            exec:
-              command:
-                - "curl"
-                - "--fail"
-                - "-o"
-                - "/dev/null"
-                - "http://localhost/HealthCheck"
-          readinessProbe:
-            initialDelaySeconds: 15
-            periodSeconds: 10
-            failureThreshold: 3
-            successThreshold: 1
-            timeoutSeconds: 2
-            exec:
-              command:
-                - "curl"
-                - "--fail"
-                - "-o"
-                - "/dev/null"
-                - "http://localhost/ReadyCheck"
+          # startupProbe:
+          #   httpGet:
+          #     path: /StartCheck
+          #     port: 80
+          #   initialDelaySeconds: 5
+          #   failureThreshold: 15
+          #   periodSeconds: 5
+          # livenessProbe:
+          #   initialDelaySeconds: 10
+          #   periodSeconds: 10
+          #   failureThreshold: 3
+          #   successThreshold: 1
+          #   timeoutSeconds: 2
+          #   exec:
+          #     command:
+          #       - "curl"
+          #       - "--fail"
+          #       - "-o"
+          #       - "/dev/null"
+          #       - "http://localhost/HealthCheck"
+          # readinessProbe:
+          #   initialDelaySeconds: 15
+          #   periodSeconds: 10
+          #   failureThreshold: 3
+          #   successThreshold: 1
+          #   timeoutSeconds: 2
+          #   exec:
+          #     command:
+          #       - "curl"
+          #       - "--fail"
+          #       - "-o"
+          #       - "/dev/null"
+          #       - "http://localhost/ReadyCheck"
       imagePullSecrets:
         - name: sample-app-secret
