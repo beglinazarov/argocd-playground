@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: sample-webapi-service
-  namespace: default
+  namespace: dev
 spec:
   selector:
     app: sample-app
