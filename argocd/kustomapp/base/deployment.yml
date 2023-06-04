@@ -6,12 +6,13 @@ spec:
   replicas: 1
   strategy:
     rollingUpdate:
-      - rollingUpdate
+      maxSurge: 25%
+      maxUnavailable: 25%
   template:
     spec:
       containers:
         - name: sample-webapi-container
-          image: 
+          image: sample-webapi:dev-v1
           resources:
             requests:
               memory: "500Mi"
@@ -19,6 +20,11 @@ spec:
             limits:
               memory: "700Mi"
               cpu: "400m"
+          envFrom:
+            - configMapRef:
+                name: mykustom-map-dev
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
+      imagePullSecrets:
+        - name: sample-webapi-secret
