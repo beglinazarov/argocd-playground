@@ -1,4 +1,3 @@
-namespace: default
 
 resources:
 - deployment.yml
@@ -14,4 +13,4 @@ namePrefix:
   kustomapp-
 
 nameSuffix:
-  -base-v1
+  -v1
