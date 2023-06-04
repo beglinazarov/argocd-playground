@@ -6,12 +6,7 @@ spec:
   template:
     spec:
       hostAliases:
-        - ip: 172.16.70.21
+        - ip: 156.26.80.51
           hostnames:
-            - rota-staging-kafka2
-        - ip: 172.16.70.22
-          hostnames:
-            - rota-staging-kafka3
-        - ip: 172.16.70.20
-          hostnames:
-            - rota-staging-kafka1
+            - sample-dev-kafka
+
