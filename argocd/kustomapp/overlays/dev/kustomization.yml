@@ -1,7 +1,7 @@
 bases:
 - ../../base
 
-#namespace: dev
+namespace: dev
 
 # resources:
 # - deployment.yml
