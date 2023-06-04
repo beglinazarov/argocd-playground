@@ -4,3 +4,4 @@ bases:
 - ../../base
 patches:
 - hpa.yml
+- replicas.yml
