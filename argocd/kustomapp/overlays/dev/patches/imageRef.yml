@@ -12,5 +12,5 @@ spec:
             - containerPort: 80
           imagePullPolicy: IfNotPresent
       imagePullSecrets:
-        - name: nexus-test-repo    
+        - name: sample-webapi-secret    
 

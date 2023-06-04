@@ -3,12 +3,19 @@ bases:
 
 namespace: dev
 
+# resources:
+# - deployment.yml
+# - service.yml
+
+# namePrefix: kustomapp-
+# nameSuffix: -dev-v1
+
 patches:
-- ./patches/replicas.yml
-- ./patches/rolloutStrategy.yml
+#- ./patches/replicas.yml
+#- ./patches/rolloutStrategy.yml
 - ./patches/imageRef.yml
 #- ./patches/probes.yml
-- ./patches/resourceLimit.yml
+#- ./patches/resourceLimit.yml
 #- ./patches/hostAliases.yml
 
 configMapGenerator:

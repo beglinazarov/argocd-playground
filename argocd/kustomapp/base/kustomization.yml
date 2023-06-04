@@ -11,7 +11,7 @@ commonAnnotations:
   app: mykustom-annotations
 
 namePrefix:
-  kustom-
+  kustomapp-
 
 nameSuffix:
-  -v1
+  -base-v1
