@@ -10,3 +10,5 @@ namespace: dev
 patchesStrategicMerge:
 - ./patches/replicas.yml
 - ./patches/imageRef.yml
+- ./patches/rolloutStrategy.yml
+
