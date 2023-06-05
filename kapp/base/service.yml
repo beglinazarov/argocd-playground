@@ -2,10 +2,8 @@ kind: Service
 apiVersion: v1
 metadata:
   name: sample-webapi-service
-  namespace: dev
+  namespace: default
 spec:
-  selector:
-    app: sample-app
   ports:
     - protocol: TCP
       port: 80

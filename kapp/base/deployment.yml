@@ -2,20 +2,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sample-webapi-deployment
-  namespace: dev
+  namespace: default
 spec:
   replicas: 1
   strategy:
     rollingUpdate:
       maxSurge: 25%
       maxUnavailable: 25%
-  selector:
-    matchLabels:
-      app: sample-app
   template:
-    metadata:
-      labels:
-        app: sample-app
     spec:
       hostAliases:
         - ip: 127.0.0.1
@@ -75,4 +69,4 @@ spec:
           #       - "/dev/null"
           #       - "http://localhost/ReadyCheck"
       imagePullSecrets:
-        - name: sample-app-secret
+        - name: sample-webapi-app-secret

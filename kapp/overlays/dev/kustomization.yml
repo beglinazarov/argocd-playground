@@ -3,5 +3,7 @@ kind: Kustomization
 bases:
 - ../../base
 
-# patches:
-# - replicas.yml
+namespace: dev
+
+patches:
+- ./patches/replicas.yml

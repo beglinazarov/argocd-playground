@@ -1,0 +1,9 @@
+/Users/beglinazarov/projects/plyg/argo/WebStatus/obj/Debug/net7.0/WebStatus.csproj.AssemblyReference.cache
+/Users/beglinazarov/projects/plyg/argo/WebStatus/obj/Debug/net7.0/WebStatus.GeneratedMSBuildEditorConfig.editorconfig
+/Users/beglinazarov/projects/plyg/argo/WebStatus/obj/Debug/net7.0/WebStatus.AssemblyInfoInputs.cache
+/Users/beglinazarov/projects/plyg/argo/WebStatus/obj/Debug/net7.0/WebStatus.AssemblyInfo.cs
+/Users/beglinazarov/projects/plyg/argo/WebStatus/obj/Debug/net7.0/WebStatus.csproj.CoreCompileInputs.cache
+/Users/beglinazarov/projects/plyg/argo/WebStatus/obj/Debug/net7.0/WebStatus.MvcApplicationPartsAssemblyInfo.cs
+/Users/beglinazarov/projects/plyg/argo/WebStatus/obj/Debug/net7.0/WebStatus.MvcApplicationPartsAssemblyInfo.cache
+/Users/beglinazarov/projects/plyg/argo/WebStatus/obj/Debug/net7.0/WebStatus.RazorAssemblyInfo.cache
+/Users/beglinazarov/projects/plyg/argo/WebStatus/obj/Debug/net7.0/WebStatus.RazorAssemblyInfo.cs
