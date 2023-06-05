@@ -7,6 +7,6 @@ resources:
 
 commonLabels:
   app: sample-webapi-app
-  someName: someValue
+  service: someValue
   owner: alice
   
