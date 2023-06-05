@@ -8,7 +8,13 @@ spec:
     rollingUpdate:
       maxSurge: 25%
       maxUnavailable: 25%
+  selector:
+    matchLabels:
+      app: sample-webapi-app
   template:
+    metadata:
+      labels:
+        app: sample-webapi-app
     spec:
       hostAliases:
         - ip: 127.0.0.1

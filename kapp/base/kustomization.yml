@@ -7,3 +7,6 @@ resources:
 
 commonLabels:
   app: sample-webapi-app
+  someName: someValue
+  owner: alice
+  
