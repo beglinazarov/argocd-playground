@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-webapi-deployment
+spec:
+  template:
+    spec:
+      containers:
+        - name: sample-webapi-container
+          image: sample-webapi:dev-v1
+          ports:
+            - containerPort: 80
+          imagePullPolicy: IfNotPresent
+      imagePullSecrets:
+        - name: sample-webapi-secret    
+

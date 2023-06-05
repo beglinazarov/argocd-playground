@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-webapi-deployment
+spec:
+  template:
+    spec:
+      hostAliases:
+        - ip: 156.26.80.51
+          hostnames:
+            - sample-dev-kafka
+
