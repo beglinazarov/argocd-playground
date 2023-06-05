@@ -5,5 +5,8 @@ bases:
 
 namespace: dev
 
-patches:
+# patches:
+# - ./patches/replicas.yml
+
+patchesStrategicMerge:
 - ./patches/replicas.yml
