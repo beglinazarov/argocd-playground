@@ -12,4 +12,6 @@ patchesStrategicMerge:
 - ./patches/imageRef.yml
 - ./patches/resourceLimit.yml
 - ./patches/rolloutStrategy.yml
+- ./patches/probes.yml
+
 
