@@ -2,7 +2,6 @@ kind: Service
 apiVersion: v1
 metadata:
   name: sample-webapi-service
-  namespace: default
 spec:
   ports:
     - protocol: TCP
